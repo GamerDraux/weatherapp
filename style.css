@@ -1,0 +1,33 @@
+body {
+    background-color:#BFB0BA;
+}
+
+#bigBox {
+    background-color: #403B39;
+    /* border: groove; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* height: 100px; */
+    align-content: center;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+#tempBox {
+    background-color: #F2AFA0;
+    text-align: center;
+    font-size: 50px;
+    margin: 10px;
+    border: groove;
+}
+
+#precipitationBox{
+    background-color: #F2AFA0;
+    text-align:center;
+    font-size: 50px;
+    margin: 10px;
+    border: groove;
+}
+
+#pageMainHeader {
+    text-align: center;
+}
