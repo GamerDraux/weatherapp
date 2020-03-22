@@ -1,16 +1,21 @@
-const kelvinToFarenheit = require('./kelvintofarenheit');
+
 
 window.addEventListener('load', function (){
     console.log ('window loaded');
     defineElementVariables();
     let weatherJson= {};
     getJsonInfo();
+  
 })
 
 
 
 
 // function listings
+function kelvinToFarenheit(kelvin){
+    let f=(kelvin-273.15)*9/5+32;
+    return f;
+}
 
 function defineElementVariables (){
     console.log ('defineElementVariables fired');
@@ -28,14 +33,17 @@ function getJsonInfo(){
     responsePromise.then(function(response){
         const jsonPromise=response.json();
         jsonPromise.then(function(json){
-            weatherJson=json.main;
-            console.log(weatherJson);
+            
+            resetDisplay(json);
         })
     })
+    
     
 }
 
 function resetDisplay(weatherJson){;
     console.log ('resetDisplay fired');
     console.log (weatherJson);
+    tempBox.innerHTML = `The current temp is: ${Math.round(kelvinToFarenheit(weatherJson.main.temp))}`;
+    precipitationBox.innerHTML = `The current weather is: ${weatherJson.weather[0].description}`
 }
