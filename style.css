@@ -7,11 +7,11 @@ body {
 }
 
 #bigBox {
-    background-color: #403B39;
-    /* border: groove; */
-    /* border-radius: .5em; */
+    background-color: rgb(191,176,186,.50);
+    border: groove;
+    border-radius: 10px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     /* height: 100px; */
     align-content: center;
     grid-auto-rows: minmax(100px, auto);
@@ -19,7 +19,7 @@ body {
 
 #tempBox {
     background-color: #F2AFA0;
-    /* border-radius: 1em; */
+    border-radius: 10px;
     text-align: center;
     font-size: 50px;
     margin: 10px;
@@ -28,8 +28,30 @@ body {
 
 #precipitationBox{
     background-color: #F2AFA0;
-    /* border-radius: 1em; */
-    text-align:center;
+    border-radius: 10px;
+    grid-column:3/4;
+    grid-row:1/3;
+    text-align: justify;
+    font-size: 50px;
+    margin: 10px;
+    border: groove;
+}
+
+#windBox{
+    background-color: #F2AFA0;
+    grid-column:1/3;
+    grid-row:2/3;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 50px;
+    margin: 10px;
+    border: groove;
+}
+
+#humidityBox{
+    background-color: #F2AFA0;
+    border-radius: 10px;
+    text-align: center;
     font-size: 50px;
     margin: 10px;
     border: groove;

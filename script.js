@@ -12,10 +12,6 @@ window.addEventListener('load', function (){
 
 
 // function listings
-function kelvinToFarenheit(kelvin){
-    let f=(kelvin-273.15)*9/5+32;
-    return f;
-}
 
 function defineElementVariables (){
     console.log ('defineElementVariables fired');
@@ -25,6 +21,12 @@ function defineElementVariables (){
     // console.log ('precipitationBox variable set to: '+precipitationBox);
     let bigBox=document.getElementById('bigBox');
     // console.log ('bigBox variable set to : '+bigBox);
+    let windBox=document.getElementById('windBox');
+    // console.log ('windBox variable set to '+windBox);
+    let humidityBox = document.getElementById('humidityBox');
+    // console.log ('humidityBox variable set to: '+humidityBox);
+    let zipCode= document.getElementById('zipCodeInput');
+    // console.log ('zipCode variable set to: '+zipCode);
 }
 
 function getJsonInfo(){
@@ -45,8 +47,10 @@ function resetDisplay(weatherJson){;
     console.log ('resetDisplay fired');
     console.log (weatherJson);
     tempBox.innerHTML = `The current temp is: ${Math.round(kelvinToFarenheit(weatherJson.main.temp))}F`;
-
-    precipitationBox.innerHTML = `The current weather is: ${createWeatherString(weatherJson)}`
+    precipitationBox.innerHTML = `The current weather is: ${createWeatherString(weatherJson)}`;
+    windBox.innerHTML =createWindString(weatherJson);
+    humidityBox.innerHTML=`The humidity is currently ${weatherJson.main.humidity}%`;
+    
 }
 
 function createWeatherString (weatherJson){
@@ -58,3 +62,10 @@ function createWeatherString (weatherJson){
     returnString+='.';
     return returnString;
 }
+
+function createWindString(weatherJson){
+    let returnString = `The wind is currently ${weatherJson.wind.speed}MPH, coming out of the ${d2d(weatherJson.wind.deg)}.`
+    return returnString;
+}
+
+

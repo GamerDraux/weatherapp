@@ -6,10 +6,15 @@
     </head>
     <body>
         <h1 id=pageMainHeader>The Weather at Home</h1>
+        <label><input type=text name=zipcode id=zipCodeInput placeholder="Enter Zipcode">Enter a ZipCode</label>
         <div id=bigBox>
             <div id=tempBox>Getting temperature... </div>
             <div id=precipitationBox>Getting precipitation...</div>
+            <div id=windBox>Getting wind results...</div>
+            <div id="humidityBox">Getting humidity results...</div>
         </div>
     </body>
     <script src="./script.js"></script>
+    <script src="./node_modules/degrees-to-direction/lib.js"></script>
+    <script src="kelvintofarenheit.js"></script>
 <html>
