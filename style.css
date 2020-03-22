@@ -6,6 +6,11 @@ body {
     background-size: cover;
 }
 
+#zipCodeBox {
+    width: auto;
+    background-color: indigo;
+}
+
 #bigBox {
     background-color: rgb(191,176,186,.50);
     border: groove;

@@ -1,11 +1,9 @@
 
-
 window.addEventListener('load', function (){
     console.log ('window loaded');
     defineElementVariables();
     let weatherJson= {};
     getJsonInfo();
-  
 })
 
 
@@ -27,11 +25,20 @@ function defineElementVariables (){
     // console.log ('humidityBox variable set to: '+humidityBox);
     let zipCode= document.getElementById('zipCodeInput');
     // console.log ('zipCode variable set to: '+zipCode);
+    let zipForm=document.getElementById('zipCodeInput');
+    console.log ('zipForm variable set to:'+zipForm);
+    zipForm.addEventListener('submit', function(e){
+        let zip = document.querySelector('input[name=zipcode');
+        getJsonInfo(zip.value);
+        e.preventDefault();
+
+    });
 }
 
-function getJsonInfo(){
+
+function getJsonInfo(zip=63385){
     console.log ('getJsonInfo fired');
-    const responsePromise=fetch('http://api.openweathermap.org/data/2.5/weather?zip=63385,us&appid=e770ede1e51fbbb66b830c2986e6bb7a');
+    const responsePromise=fetch(`http://api.openweathermap.org/data/2.5/weather?zip=${zip},us&appid=e770ede1e51fbbb66b830c2986e6bb7a`);
     responsePromise.then(function(response){
         const jsonPromise=response.json();
         jsonPromise.then(function(json){
