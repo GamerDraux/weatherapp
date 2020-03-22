@@ -1,5 +1,9 @@
 body {
     background-color:#BFB0BA;
+    background-image: url('homepic.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 #bigBox {
