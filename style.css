@@ -9,6 +9,7 @@ body {
 #bigBox {
     background-color: #403B39;
     /* border: groove; */
+    /* border-radius: .5em; */
     display: grid;
     grid-template-columns: 1fr 1fr;
     /* height: 100px; */
@@ -18,6 +19,7 @@ body {
 
 #tempBox {
     background-color: #F2AFA0;
+    /* border-radius: 1em; */
     text-align: center;
     font-size: 50px;
     margin: 10px;
@@ -26,6 +28,7 @@ body {
 
 #precipitationBox{
     background-color: #F2AFA0;
+    /* border-radius: 1em; */
     text-align:center;
     font-size: 50px;
     margin: 10px;

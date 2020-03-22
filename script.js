@@ -45,5 +45,16 @@ function resetDisplay(weatherJson){;
     console.log ('resetDisplay fired');
     console.log (weatherJson);
     tempBox.innerHTML = `The current temp is: ${Math.round(kelvinToFarenheit(weatherJson.main.temp))}F`;
-    precipitationBox.innerHTML = `The current weather is: ${weatherJson.weather[0].description}`
+
+    precipitationBox.innerHTML = `The current weather is: ${createWeatherString(weatherJson)}`
+}
+
+function createWeatherString (weatherJson){
+    let returnString = [];
+    for (i=0; i<weatherJson.weather.length; i++){
+        returnString.push(weatherJson.weather[i].description);
+    }
+    returnString= returnString.join(", ");
+    returnString+='.';
+    return returnString;
 }
