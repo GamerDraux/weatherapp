@@ -44,6 +44,6 @@ function getJsonInfo(){
 function resetDisplay(weatherJson){;
     console.log ('resetDisplay fired');
     console.log (weatherJson);
-    tempBox.innerHTML = `The current temp is: ${Math.round(kelvinToFarenheit(weatherJson.main.temp))}`;
+    tempBox.innerHTML = `The current temp is: ${Math.round(kelvinToFarenheit(weatherJson.main.temp))}F`;
     precipitationBox.innerHTML = `The current weather is: ${weatherJson.weather[0].description}`
 }
