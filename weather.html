@@ -5,10 +5,13 @@
         <title>Weather at Home</title>
     </head>
     <body>
-        <h1 id=pageMainHeader>The Weather at Home</h1>
+        <div id="headers">
+            <h1 id=pageMainHeader>The Weather at Home</h1>
+            <h2 id=cityName></h2>
+        </div>
         <form id=zipCodeInput>
-        <input id=zipCodeBox type=zipcode name=zipcode pattern=[0-9]{5} placeholder="Enter 5-digit zipcode">
-        <input id=submitZipButton type="submit" name=zipSubmit value="submit Zip">
+            <input id=zipCodeBox type=zipcode name=zipcode pattern=[0-9]{5} placeholder="Enter 5-digit zipcode">
+            <input id=submitZipButton type="submit" name=zipSubmit value="submit Zip">
         </form>
         <div id=bigBox>
             <div id=tempBox>Getting temperature... </div>

@@ -6,6 +6,31 @@ body {
     background-size: cover;
 }
 
+#headers{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+}
+
+#pageMainHeader {
+    color: wheat;
+    margin: 10px;
+    text-align: center;
+    border: groove;
+    border-radius: 10px;
+    background-color: #403B39;
+    grid-column: 2/5;
+}
+
+#cityName{
+    color: wheat;
+    margin: 10px;
+    text-align: center;
+    border: groove;
+    border-radius: 10px;
+    background-color: #403B39;
+    grid-column:3/4;
+}
+
 #zipCodeBox {
     width: auto;
     background-color: #403B39;

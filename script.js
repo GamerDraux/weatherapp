@@ -56,6 +56,8 @@ function getJsonInfo(zip=63385){
 function resetDisplay(weatherJson){;
     console.log ('resetDisplay fired');
     console.log (weatherJson);
+    let city = document.getElementById('cityName');
+    city.innerHTML=weatherJson.name;
     tempBox.innerHTML = `The current temp is: ${Math.round(kelvinToFarenheit(weatherJson.main.temp))}F`;
     precipitationBox.innerHTML = `The current weather is: ${createWeatherString(weatherJson)}`;
     windBox.innerHTML =createWindString(weatherJson);
