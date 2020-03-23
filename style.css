@@ -8,11 +8,13 @@ body {
 
 #zipCodeBox {
     width: auto;
-    background-color: indigo;
+    background-color: #403B39;
+    color:#BFB0BA
+
 }
 
 #bigBox {
-    background-color: rgb(191,176,186,.50);
+    background-color: rgb(191,176,186,.70);
     border: groove;
     border-radius: 10px;
     display: grid;

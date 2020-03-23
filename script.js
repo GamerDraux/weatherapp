@@ -40,12 +40,15 @@ function getJsonInfo(zip=63385){
     console.log ('getJsonInfo fired');
     const responsePromise=fetch(`http://api.openweathermap.org/data/2.5/weather?zip=${zip},us&appid=e770ede1e51fbbb66b830c2986e6bb7a`);
     responsePromise.then(function(response){
+        if (response.status===404){
+            alert('Sorry, but that does not seem to be a valid Zip code.  No cities were found with that Zip');
+        }else {
         const jsonPromise=response.json();
         jsonPromise.then(function(json){
-            
-            resetDisplay(json);
+        resetDisplay(json);
         })
-    })
+        }
+    });
     
     
 }
